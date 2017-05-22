@@ -5,15 +5,14 @@ int main()
 {    
     long s;    
     scanf("%d",&s);
+    // allocating memory dynamically
     int *a=(int*)malloc(2*s*sizeof(int));
     int Top=-1;
     int t,x=0;
     scanf("%d",&t);
     char oper[20];
     while(x!=t){
-  //      if(t==s-1){
-  //          int *a=(int*)malloc(2*s*sizeof(int));
-  //      }
+  
         scanf("%s",oper);
         if(strcmp(oper,"pop")==0)
         {
@@ -28,8 +27,6 @@ int main()
         
         }
         else if(strcmp(oper,"push")==0){
-        
-            
             
                 int i;
                 scanf("%d\n",&i);
@@ -37,9 +34,7 @@ int main()
                 a[Top]=i;
                 printf("1\n");
             
-            
-            
-        
+ 
         }
         else if(strcmp(oper,"isempty")==0){
             if(Top==-1){
@@ -61,7 +56,7 @@ int main()
             }
         
         }
-        x+=1;
+        x=x+1;
     }
       return 0;
 }
